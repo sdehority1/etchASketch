@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container{
+    border: solid;
+    width: 50%;
+    height:50vh;
+    align-items: center; /* Optional: vertical centering */
+    justify-content: center; /* Optional: horizontal centering */
+}
+
+.inputBoxes{ 
+    width: 8%; 
+}
