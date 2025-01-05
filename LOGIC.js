@@ -1,11 +1,15 @@
 blackDivsButton.addEventListener('click', function () {
-  let div = document.createElement("div");
-  div.appendChild(para);
-  document.getElementById("container").appendChild(div);
-  alert("it's working")
+  let i = document.getElementById('blackDivs').value;
+  alert(typeof i);
+  i= Number(i);
+  alert(typeof i);
+  //let div = document.createElement("div");
+  //div.appendChild(para);
+  //document.getElementById("container").appendChild(div);
+
 
 });
 
 rainbowDivsButton.addEventListener('click', function () {
-  //alert ("it's working");
+  alert ("it's working");
 });
