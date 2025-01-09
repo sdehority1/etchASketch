@@ -1,17 +1,21 @@
-body{
+body {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-#container{
+#container {
     border: solid;
     width: 50%;
-    height:50vh;
-    align-items: center; /* Optional: vertical centering */
-    justify-content: center; /* Optional: horizontal centering */
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
 }
 
-.inputBoxes{ 
-    width: 8%; 
+.blackStyledDiv {
+    
+}
+
+.inputBoxes {
+    width: 8%;
 }
