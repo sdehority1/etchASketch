@@ -1,3 +1,18 @@
+//CLEAR CONTAINER FUNCTION
+//HOW THIS WORKS: While container has a child, RUN this code. removeChild does exactly that, removes the child element ONLY IF it has a first child. 
+function clearContainer() {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+}
+
+//CLEAR THE INPUT FIELD FOR THE BLACK DIVS  
+function clearBlackDivsNumber (){
+  let inputRaw = document.getElementById('blackDivs');
+  inputRaw.value = ""; // Clear the input field
+}
+
+//GENERATE BLACK DIVS ONLY
 blackDivsButton.addEventListener('click', function () {
   let inputRaw = document.getElementById('blackDivs');
   let i = inputRaw.value;
@@ -5,33 +20,37 @@ blackDivsButton.addEventListener('click', function () {
 
   if (i < 1 || i > 99) {
     inputRaw.value = ""; // Clear the input field
-    i = 0;
+    i = 0; //Need to set this to 0 otherwise the if statement below will parse the i from above
     alert("Please enter a number between 1 and 99");
   } else {
     i = Number(i);
   }
 
-  for (let j = 1; j <= i; j++) {
-    let div = document.createElement("div");
-    div.textContent = 'Yes';
-    div.className = "blackStyledDiv";
-    document.getElementById("container").appendChild(div);
+  if (container.firstChild) {
+    clearContainer();
+      for (let j = 1; j <= i; j++) {
+        let div = document.createElement("div");
+        div.textContent = 'Yes';
+        div.className = "blackStyledDiv";
+        document.getElementById("container").appendChild(div);
+      }
+  } else {
+    for (let j = 1; j <= i; j++) {
+      let div = document.createElement("div");
+      div.textContent = 'Yes';
+      div.className = "blackStyledDiv";
+      document.getElementById("container").appendChild(div);
+    }
   }
-
-  //alert(typeof i);
-  //alert(i);
-  //let div = document.createElement("div");
-  //div.appendChild(para);
-  //document.getElementById("container").appendChild(div);
 });
 
+//GENERATE RANIBOW DIVS ONLY
 rainbowDivsButton.addEventListener('click', function () {
   alert("it's working");
 });
 
+//CLEAR ALL DIVS 
 clearButton.addEventListener('click', function () {
-  //HOW THIS WORKS: While container has a child, RUN this code. removeChild does exactly that, removes the child element ONLY IF it has a first child. 
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
+    clearContainer();
+    clearBlackDivsNumber();
 });

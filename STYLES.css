@@ -14,13 +14,12 @@ body {
 }
 
 .blackStyledDiv {
-    border: 1px solid green; 
-    flex: 1;
+    border: 1px solid white; 
     background-color: orange; 
 }
 
 .blackStyledDiv:hover{
-    background:blue; 
+    background:black; 
 }
 
 .inputBoxes {
