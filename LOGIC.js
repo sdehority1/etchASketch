@@ -1,3 +1,5 @@
+let blackBox;
+
 //CLEAR CONTAINER FUNCTION
 //HOW THIS WORKS: While container has a child, RUN this code. removeChild does exactly that, removes the child element ONLY IF it has a first child. 
 function clearContainer() {
@@ -9,7 +11,7 @@ function clearContainer() {
 //CLEAR THE INPUT FIELD FOR THE BLACK DIVS  
 function clearBlackDivsNumber (){
   let inputRaw = document.getElementById('blackDivs');
-  inputRaw.value = ""; // Clear the input field
+  inputRaw.value = ""; 
 }
 
 //GENERATE BLACK DIVS ONLY
@@ -19,7 +21,7 @@ blackDivsButton.addEventListener('click', function () {
   let j = 1;
 
   if (i < 1 || i > 99) {
-    inputRaw.value = ""; // Clear the input field
+    inputRaw.value = "";
     i = 0; //Need to set this to 0 otherwise the if statement below will parse the i from above
     alert("Please enter a number between 1 and 99");
   } else {
@@ -30,19 +32,27 @@ blackDivsButton.addEventListener('click', function () {
     clearContainer();
       for (let j = 1; j <= i; j++) {
         let div = document.createElement("div");
-        div.textContent = 'Yes';
+        //div.textContent = 'Yes';
         div.className = "blackStyledDiv";
         document.getElementById("container").appendChild(div);
       }
   } else {
     for (let j = 1; j <= i; j++) {
       let div = document.createElement("div");
-      div.textContent = 'Yes';
+      //div.textContent = 'Yes';
       div.className = "blackStyledDiv";
       document.getElementById("container").appendChild(div);
     }
   }
 });
+
+/*PICK UP HERE*/
+blackBox = document.getElementsByClassName("blackStyledDiv");
+
+blackBox.addEventListener("mouseover", function() {
+  console.log("Mouse is over the element!");
+});
+
 
 //GENERATE RANIBOW DIVS ONLY
 rainbowDivsButton.addEventListener('click', function () {
@@ -54,3 +64,5 @@ clearButton.addEventListener('click', function () {
     clearContainer();
     clearBlackDivsNumber();
 });
+
+
