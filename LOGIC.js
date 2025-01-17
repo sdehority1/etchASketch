@@ -1,12 +1,11 @@
-let blackBox;
-
 //CLEAR CONTAINER FUNCTION
 //HOW THIS WORKS: While container has a child, RUN this code. removeChild does exactly that, removes the child element ONLY IF it has a first child. 
 function clearContainer() {
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
+  while (interiorContainer.firstChild) {
+    interiorContainer.removeChild(interiorContainer.firstChild);
   }
 }
+
 
 //CLEAR THE INPUT FIELD FOR THE BLACK DIVS  
 function clearBlackDivsNumber (){
@@ -28,30 +27,24 @@ blackDivsButton.addEventListener('click', function () {
     i = Number(i);
   }
 
-  if (container.firstChild) {
+  if (interiorContainer.firstChild) {
     clearContainer();
       for (let j = 1; j <= i; j++) {
         let div = document.createElement("div");
-        //div.textContent = 'Yes';
         div.className = "blackStyledDiv";
-        document.getElementById("container").appendChild(div);
+        document.getElementById("interiorContainer").appendChild(div);
       }
   } else {
     for (let j = 1; j <= i; j++) {
       let div = document.createElement("div");
-      //div.textContent = 'Yes';
       div.className = "blackStyledDiv";
-      document.getElementById("container").appendChild(div);
+      document.getElementById("interiorContainer").appendChild(div);
     }
+    //The first step needs to be creating X number of rows that take up x percent of the parent box. These should be horzontal rows. Then create boxes inside these rows which give the appearence of having columns. 
+
   }
 });
 
-/*PICK UP HERE*/
-blackBox = document.getElementsByClassName("blackStyledDiv");
-
-blackBox.addEventListener("mouseover", function() {
-  console.log("Mouse is over the element!");
-});
 
 
 //GENERATE RANIBOW DIVS ONLY
