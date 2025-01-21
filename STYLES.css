@@ -11,31 +11,19 @@ body {
     align-items: center;
     justify-content: space-evenly;
     display: flex;
-    align-items: stretch;
-    margin: 0; 
-    padding: 0;
-}
-
-#interiorContainer{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction:column;    
 }
 
 .blackStyledDiv {
-    border: 1px solid white; 
-    background-color: orange; 
-    width: 100%; 
-    height: 100%; 
-    margin: 0; 
-    padding: 0;
+    border: 1px solid white;
+    background-color: orange;
+    width: 10px;
+    height: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.blackStyledDiv:hover{
-    background:black; 
+.blackStyledDiv:hover {
+    background: black;
 }
 
 .inputBoxes {
@@ -66,30 +54,31 @@ body {
     justify-content: space-evenly;
     display: inline-block;
     align-items: stretch;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     /*Having space between the divs in the HTML creates gaps between the divs; this avoids that*/
     font-size: 0;
 }
 
-.container2InsideContainer{
-    display:flex;
-    width: 100%; 
-    height: 25%;
-    border: 1px solid black; 
+.container2InsideContainer {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    border: 1px solid black;
 }
 
-.testDivs{
-  height: 100%;
-  width: 10%;
-  border: .5px solid; 
-  display: inline-block; 
-  margin: 0; 
-  padding: 0;
-  background-color: green; 
+.testDivs {
+    height: 100%;
+    width: 100%;
+    border: .5px solid;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: green;
 }
 
-.testDivs:hover{
-    background:yellow; 
+.testDivs:hover {
+    background: yellow;
 }
+
 /*END WORK AREA*/
